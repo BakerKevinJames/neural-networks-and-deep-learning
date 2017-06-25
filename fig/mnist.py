@@ -8,6 +8,12 @@ Draws images based on the MNIST data."""
 # Standard library
 import cPickle
 import sys
+import os
+
+#set working dir
+folders = os.getcwd().split('/')
+if folders[-1] != 'fig':
+    os.chdir('fig')
 
 # My library
 sys.path.append('../src/')

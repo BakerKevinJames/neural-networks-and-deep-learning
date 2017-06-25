@@ -13,6 +13,13 @@ import mnist_loader
 from sklearn import svm
 
 def svm_baseline():
+    import os
+
+#set working dir
+    folders = os.getcwd().split('/')
+    if folders[-1] != 'src':
+        os.chdir('src')
+
     training_data, validation_data, test_data = mnist_loader.load_data()
     # train
     clf = svm.SVC()

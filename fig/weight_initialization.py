@@ -13,6 +13,12 @@ square root of the number of input neurons.
 import json
 import random
 import sys
+import os
+
+#set working dir
+folders = os.getcwd().split('/')
+if folders[-1] != 'fig':
+    os.chdir('fig')
 
 # My library
 sys.path.append('../src/')
